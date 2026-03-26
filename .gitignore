@@ -1,0 +1,36 @@
+# Credenciais & Segurança
+credentials/
+.env
+.env.local
+*.key
+*.pem
+*.crt
+
+# Arquivos de sistema
+.DS_Store
+Thumbs.db
+*.swp
+*.swo
+*~
+.vscode/settings.json
+
+# Node
+node_modules/
+npm-debug.log
+yarn-error.log
+
+# Histórico temporário
+*.bak
+*.tmp
+.history/
+
+# Logs
+*.log
+
+# OS
+.idea/
+*.iml
+
+# Metadados privados
+.openclaw/credentials/
+.openclaw/private/
