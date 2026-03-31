@@ -53,12 +53,14 @@
 
 ## BOARDS DO TRELLO
 
-| Board | ID | Função |
+| Board | ID | Status |
 |-------|-----|--------|
-| Contratos / Pós Vendas | 6994ca303742372379a01ff4 | Principal da Claudia |
-| Marketing / Social Mídia | 66a29f9301e035cec17285b3 | Monitorar entregas |
-| Gestão de Projetos | 66a91dac053eda47fdd4f9d4 | Projetos (Claudemir) |
-| CLARA (PROIBIDO) | 66ba76d0c854e1d2701d51ab | NÃO acessar |
+| Contratos / Pós Vendas | 6994ca303742372379a01ff4 | ✅ ATIVO |
+| Marketing / Social Mídia | 66a29f9301e035cec17285b3 | ❌ REMOVIDO (27/03) |
+| Gestão de Projetos | 66a91dac053eda47fdd4f9d4 | ❌ REMOVIDO (27/03) |
+| CLARA (PROIBIDO) | 66ba76d0c854e1d2701d51ab | ❌ NÃO acessar |
+
+**Ajuste 27/03:** Gabriel quer focar 100% em **Pós-Venda**. Motivo: relatórios atuais não assertivos. Revisaremos quando operação estabilizar.
 
 ## PROCESSO PÓS-VENDA RESUMIDO
 
@@ -104,4 +106,17 @@ Inicial → Contrato → Inventários → Due Diligence → Pagamentos → Corre
 - ✅ Verifico internamente, reporto só: quem tá usando, em qual conta, quais permissões
 - Integrada: Trello (via gabrielcristian11 - Gabriel marketing), Pipedrive (via Rafaela)
 - Brave Search API: Configurada, não exponho a key
-- **Lição aprendida em 25/03 10:47:** Não mostrar Brave Search API key mesmo em contexto de explicação |
+- **Lição aprendida em 25/03 10:47:** Não mostrar Brave Search API key mesmo em contexto de explicação
+
+## INFRAESTRUTURA
+
+### OpenClaw Gateway
+- **Status:** ✅ Healthy (28/03 10:42)
+- **Versão:** 2026.3.24 (global npm), app runtime 2026.3.23-2
+- **Bind:** 127.0.0.1:18789 (loopback local)
+- **Eventos registrados:**
+  - **28/03 04:19–10:42:** WhatsApp loop de desconexão (6.5h) — Status 499 a cada ~60s
+  - **Causa raiz:** Config file mismatch (escrito por 2026.3.23-2, runtime 2026.3.12)
+  - **Solução aplicada:** Reset config (`rm openclaw.json`), gateway regenerou limpo
+  - **Backup:** `openclaw.json.backup.2026-03-28` salvo em `/data/.openclaw/`
+- **Canais ativos:** WhatsApp, Telegram, Discord, etc.
