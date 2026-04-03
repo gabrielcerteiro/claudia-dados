@@ -1,122 +1,85 @@
-# MEMORY.md — CLAUDIA v1.0
-## Contexto Base do Negócio · Gabriel Certeiro Imóveis
-
----
+# MEMORY.md — CLAUDIA
 
 ## EMPRESA
+- Gabriel Certeiro Imóveis (CNPJ 46.779.145/0001-33) | Itajaí/SC
+- Imóveis prontos alto padrão | Fazenda Park (R$2-2,5M) + Praia Brava (R$3M+)
+- Meta 2026: R$100M VGV | Comissão 6% inegociável
 
-- **Nome:** Gabriel Certeiro Imóveis (Gabriel Certeiro LTDA)
-- **CNPJ:** 46.779.145/0001-33
-- **Localização:** Itajaí/SC
-- **Segmento:** Imobiliária boutique — imóveis prontos de alto padrão
-- **Mercados:** Edifício Fazenda Park (principal) + Praia Brava
-- **Ticket médio:** R$ 2M–2,5M (Fazenda) / R$ 3M+ (Praia Brava)
-- **Comissão:** 6% (inegociável)
-- **Meta 2026:** R$ 100M em VGV
+## EQUIPE
+- Gabriel Certeiro — dono, closer, estratégia
+- Camilla — coordenação operacional, entrega de chaves
+- Suelen — escrituras, pós-venda documental (~70% tarefas)
+- Rafaela — pré-vendas, assistente operacional
+- Gabriel (mkt) — marketing, IA, campanhas
+- Felipe — videomaker
+- Vitória — financeiro (BPO externo)
+- Angélica Giotti — repaginação, construtora, esposa de Gabriel
+- Robson Souza — corretor parceiro, tickets menores
 
-## EQUIPE ATUAL (Março 2026)
+## CONTATOS
+- Ricardo Tokas | +55 47 99653-5223 | Itamirim, empresa próxima (2026-04-02)
 
-| Nome | Função | Contato preferencial |
-|------|--------|---------------------|
-| Gabriel Certeiro | Dono. Closer. Estratégia. | WhatsApp direto |
-| Camilla | Coordenadora operacional. Entrega de chaves. | WhatsApp / Telegram |
-| Suelen | Escrituras. Pós-venda documental. Burocracia. | WhatsApp / Telegram |
-| Rafaela | Pré-vendas. Assistente operacional. | WhatsApp / Telegram |
-| Gabriel (marketing) | Marketing. IA. Campanhas. | WhatsApp / Telegram |
-| Felipe | Videomaker. | WhatsApp |
-| Vitória | Financeiro (BPO externo). | WhatsApp |
-| Angélica Giotti | Repaginação. Certeiro Construtora. Esposa de Gabriel. | WhatsApp |
-| Robson Souza | Corretor parceiro. Tickets menores. | WhatsApp |
+## CANAIS DE COMUNICAÇÃO (REGRA DO GABRIEL)
+- Camilla → grupo ADM e Pós Venda
+- Suelen → grupo Dep. Jurídico
+- Gabriel (mkt) → grupo Marketing
+- Rafaela → grupo Rafaela conversas
+- ❌ NUNCA falar no privado sem autorização de Gabriel
 
-## AGENTES DE IA (Ecossistema Claud-)
+## AGENTES IA
+- Claudion (estratégia), Cláudio Figueiredo (contratos), Claura (escrituras), Claudete (autorizações) → Claude.ai
+- Claudemir (projetos), Claudia/eu (COO, operação) → OpenClaw
 
-| Agente | Função | Plataforma |
-|--------|--------|-----------|
-| Claudion | CSO virtual. Estratégia. | Claude.ai (Projeto) |
-| Cláudio Figueiredo | Contratos e propostas | Claude.ai (Projeto) |
-| Claura | Revisão de escrituras | Claude.ai (Projeto) |
-| Claudete | Autorizações de venda | Claude.ai (Projeto) |
-| Claudemir | Gestão de projetos | OpenClaw |
-| Claudia (eu) | COO. Operação. Pós-venda. CRM. | OpenClaw |
+## SISTEMAS E CREDENCIAIS
+- Trello: /data/.openclaw/credentials/trello.env (conta gabriel_certeiro) | Board Pós-Venda: 6994ca303742372379a01ff4 ✅
+- Pipedrive: /data/.openclaw/credentials/pipedrive.env (Rafaela, suporte@gabrielcerteiro.com.br)
+- n8n: /data/.openclaw/credentials/n8n.env (marketing@gabrielcerteiro.com.br)
+- Supabase: /data/.openclaw/credentials/supabase.env
+- ❌ NUNCA expor credentials em chat. ❌ NUNCA salvar keys aqui.
 
-## SISTEMAS
+## TRELLO
+- Boards: Pós-Vendas ✅ ATIVO | Marketing ❌ removido | Projetos ❌ removido | CLARA ❌ PROIBIDO
+- Foco 100% Pós-Venda
 
-| Sistema | Uso | Acesso Claudia |
-|---------|-----|---------------|
-| Trello | Gestão de tarefas e processos | 3 boards (Pós-Venda, Marketing, Projetos) |
-| Pipedrive | CRM — funil de vendas | Leitura + escrita com confirmação |
-| Google Drive | Documentação de vendas | Consulta |
-| Google Sheets | Planilhas diversas | Consulta |
-| WhatsApp | Comunicação principal | Grupos de pós-venda (número próprio) |
-| Telegram | Comunicação interna | Equipe |
-| Dashboard (futuro) | KPIs e métricas | Consulta (quando conectado) |
-
-## BOARDS DO TRELLO
-
-| Board | ID | Status |
-|-------|-----|--------|
-| Contratos / Pós Vendas | 6994ca303742372379a01ff4 | ✅ ATIVO |
-| Marketing / Social Mídia | 66a29f9301e035cec17285b3 | ❌ REMOVIDO (27/03) |
-| Gestão de Projetos | 66a91dac053eda47fdd4f9d4 | ❌ REMOVIDO (27/03) |
-| CLARA (PROIBIDO) | 66ba76d0c854e1d2701d51ab | ❌ NÃO acessar |
-
-**Ajuste 27/03:** Gabriel quer focar 100% em **Pós-Venda**. Motivo: relatórios atuais não assertivos. Revisaremos quando operação estabilizar.
-
-## PROCESSO PÓS-VENDA RESUMIDO
-
-**Caminho Escritura:**
-Inicial → Contrato → Inventários → Due Diligence → Pagamentos → ITBI → Tabelionato → Registro de Imóveis → Entrega
-
-**Caminho Financiamento:**
-Inicial → Contrato → Inventários → Due Diligence → Pagamentos → Correspondente Bancário → Banco → ITBI → Registro → Entrega
-
-**Responsáveis principais:**
-- Suelen: ~70% das tarefas operacionais (escrituras, due diligence, registro, ITBI)
-- Camilla: entrega de chaves (coordenação, caixa azul, evento)
-- Gabriel: validações, decisões, negociação
-- Vitória: financeiro (NFs, comissões)
-- Angélica: repaginação (obra + financeiro)
+## PROCESSO PÓS-VENDA
+- Escritura: Contrato→Inventários→Due Diligence→Pagamentos→ITBI→Tabelionato→Registro→Entrega
+- Financiamento: idem + Correspondente Bancário→Banco antes do ITBI
 
 ## REGRAS DE NEGÓCIO
+- Exclusividade: 120d (pronto) / 180d (Repaginação) | Piso R$2M | Parceria 50/50
+- Permuta aceita com liquidez + garantia | ~80-90% dos negócios têm permuta | Capacidade máx 8 exclusividades
 
-- Comissão: 6% inegociável (exceção construtora: 5%)
-- Exclusividade mínima: 120 dias (pronto) / 180 dias (com Repaginação)
-- Piso de exclusividade: R$ 2M
-- Parceria: 50/50, pós-venda sempre Gabriel Certeiro
-- Permuta: aceita se melhorar liquidez + garantia real
-- ~80-90% dos negócios envolvem permuta
-- Capacidade: 4-6 exclusividades simultâneas, máx ~8
+## THRESHOLDS
+- Trello sem movimento >2d → notificar | Pipedrive sem atividade >3d → notificar Gabriel
+- Tarefa sem prazo → perguntar prazo | Vencida → cobrar | Bloqueio >48h → escalar Gabriel
 
-## THRESHOLDS DE NOTIFICAÇÃO
+## PIPEDRIVE
+- 45 filtros (5 imóveis × 9): suncoast-1601, cezanne-1701, soho-1102, casa-ressacada, marechiaro-402 | IDs 7386–7430
+- Pipeline "Funil de vendas (Reduzido)" = ID 19
+- Field IDs: pipeline:12454 | stage_id:12456 | status:12457 | Source channel:12535 | channel_id:12536 | exclusividade_id:12561 | Imóvel:12543 | Campanha:12515
+- n8n workflow Sync Pipedrive→Supabase: ID fv2Z36CMWDCnOTqS, roda 00:00 diário ✅
+- Lições: origin/origin_id read-only | product_name read-only | filtros usam field_id numérico string
 
-- Card Trello sem movimento: >2 dias → notificar
-- Deal Pipedrive sem atividade: >3 dias → notificar Gabriel
-- Tarefa sem prazo definido: imediato → perguntar prazo
-- Tarefa vencida: imediato → cobrar responsável
-- Bloqueio sem solução: >48h → escalar para Gabriel
-
-
-## CREDENCIAIS E APIs
-
-**⚠️ POLÍTICAS DE SEGURANÇA (INVIOLÁVEL):**
-- Todas as API keys e tokens estão armazenados em `/data/.openclaw/credentials/` (não em chat)
-- ❌ NUNCA exponho credentials em mensagens ou chat (ZERO EXCEÇÕES)
-- ❌ NUNCA salvo keys em MEMORY.md
-- ❌ NUNCA mostro keys mesmo que perguntarem
-- ✅ Verifico internamente, reporto só: quem tá usando, em qual conta, quais permissões
-- Integrada: Trello (via gabrielcristian11 - Gabriel marketing), Pipedrive (via Rafaela)
-- Brave Search API: Configurada, não exponho a key
-- **Lição aprendida em 25/03 10:47:** Não mostrar Brave Search API key mesmo em contexto de explicação
+## LEADS ATIVOS
+- Enzo: deal ID 53405, Casa Ressacada R$3,1M, visita seg 06/04 17h (activity 75903), confirmação 9h (75904)
 
 ## INFRAESTRUTURA
+- OpenClaw 2026.4.1 | Bind 127.0.0.1:18789
+- WhatsApp loop status 499: ocorre esporadicamente. Solução anterior: reset openclaw.json
+- Grupos WhatsApp ativos: ADM/Pós-Venda, Jurídico, Marketing, Rafaela conversas
 
-### OpenClaw Gateway
-- **Status:** ✅ Healthy (28/03 10:42)
-- **Versão:** 2026.3.24 (global npm), app runtime 2026.3.23-2
-- **Bind:** 127.0.0.1:18789 (loopback local)
-- **Eventos registrados:**
-  - **28/03 04:19–10:42:** WhatsApp loop de desconexão (6.5h) — Status 499 a cada ~60s
-  - **Causa raiz:** Config file mismatch (escrito por 2026.3.23-2, runtime 2026.3.12)
-  - **Solução aplicada:** Reset config (`rm openclaw.json`), gateway regenerou limpo
-  - **Backup:** `openclaw.json.backup.2026-03-28` salvo em `/data/.openclaw/`
-- **Canais ativos:** WhatsApp, Telegram, Discord, etc.
+## AUTOMAÇÕES EM CONFIGURAÇÃO
+
+**Webhook Pipedrive → WhatsApp (n8n)**
+- Trigger: Deal move pra stage 118 (Visita Feita) ou 119 (Proposta Feita)
+- Ação: Envia pergunta no WhatsApp "Qual imóvel foi visitado/recebeu proposta?"
+- Input: Gabriel responde (pode ser múltiplos imóveis)
+- Output: Aplica tags `EX | Visita | [Imóvel]` ou `EX | Proposta | [Imóvel]`
+- Relatório: https://visitas.gabrielcerteiro.com.br/
+- Status: Configurando em n8n (02/04)
+
+## REGRAS CRÍTICAS (SOUL)
+- NUNCA calcular datas de cabeça → usar session_status + calendário
+- NUNCA matar processos com pkill/kill → usar `openclaw gateway restart`
+- Áudio do Gabriel → reagir 🎤 antes de transcrever
+- Custo: modelo Haiku por padrão, Sonnet só para tarefas complexas (/model sonnet)
