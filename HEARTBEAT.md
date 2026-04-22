@@ -1,5 +1,8 @@
-# HEARTBEAT.md
+# Heartbeat
 
-# Keep this file empty (or with only comments) to skip heartbeat API calls.
+model: ollama:llama3.2:1b
 
-# Add tasks below when you want the agent to check something periodically.
+## Tarefas periódicas
+
+- Verificar se há mensagens urgentes não respondidas nos canais ativos
+- Checar se os cron jobs estão funcionando corretamente

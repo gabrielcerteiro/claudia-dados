@@ -34,3 +34,4 @@ yarn-error.log
 # Metadados privados
 .openclaw/credentials/
 .openclaw/private/
+dashboard-pendencias.html

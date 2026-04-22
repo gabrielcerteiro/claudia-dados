@@ -1,87 +1,71 @@
 # AUTOMAÇÕES — Claudia
+## Atualizado: 02/04/2026
 
-## Status: EM DESENVOLVIMENTO
+---
+
+## STATUS GERAL
+- Script monitor-visitas.sh: ✅ criado, testado
+- Cron monitor-visitas: ❌ pendente
+- Monitor propostas: ❌ pendente
+- Tags no Pipedrive: ✅ criadas manualmente
 
 ---
 
 ## AUTOMAÇÃO 1: VISITA FEITA
 
 **Trigger:** Visita cadastrada em https://visitas.gabrielcerteiro.com.br/
+**Banco:** Supabase vtykzralkxlbqqkleofl.supabase.co — tabela `visitas`
+**Script:** /data/.openclaw/workspace/scripts/monitor-visitas.sh
+**Estado:** /tmp/visitas_last_id.txt
 
-**Ação:**
-1. Monitoro a landing page periodicamente (cron 5/5 min)
-2. Detecta visita nova
-3. Procura o deal do cliente no Pipedrive
-4. Se achar → aplica tag `EX | Visita | [Imóvel]`
-5. Se não tiver certeza qual cliente → pergunta no WhatsApp
+**Lógica:**
+1. Busca visitas novas (mais recentes que último ID)
+2. Verifica se é exclusividade (Casa Ressacada, Suncoast 1601, Cezanne 1701, Soho 1102, Marechiaro 402)
+3. Acha deal no Pipedrive pelo nome → notifica Gabriel pra confirmar tag
+4. Não acha → pede Gabriel identificar o deal
 
-**Status:** Pendente - preciso saber como acessar os dados da landing page (API? Banco de dados? Browser scraping?)
+**Cron:** a cada 15 min via cron tool (pendente)
 
 ---
 
 ## AUTOMAÇÃO 2: PROPOSTA FEITA
 
-**Trigger:** Deal move pra stage 119 (Proposta Feita) no Pipedrive
+**Trigger:** Deal entra no stage 119 (Proposta Feita) — Pipeline 19
+**Lógica:**
+1. Detectar deal no stage 119
+2. Perguntar Gabriel se proposta foi em exclusividade
+3. Aplicar tag EX | Proposta | [Imóvel]
+4. Se >3 dias no stage → perguntar de novo
 
-**Ação Inicial:**
-1. Detecto o movimento
-2. Pergunto no WhatsApp: "Proposta do [cliente] foi em qual exclusividade?"
-3. Você responde
-4. Aplico tag `EX | Proposta | [Imóvel]`
-
-**Ação Follow-up (>3 dias):**
-1. Se deal ficar >3 dias no stage 119 sem mover
-2. Pergunto de novo: "Ouve proposta em outro imóvel?"
-3. Se sim → aplico tag adicional `EX | Proposta | [Imóvel 2]`
-
-**Stages do Funil:**
-- 116 = Novo lead
-- 117 = Atendimento iniciado
-- 130 = Lead brifado
-- 129 = Opções enviadas
-- 124 = Visita agendada
-- 118 = Visita feita ← futura automação 1
-- 123 = Imóvel qualificado
-- 119 = Proposta feita ← automação 2
-- 122 = Fechamento
-
-**Pipeline ID:** 19 (Funil de vendas Reduzido)
-
-**Status:** Implementável agora
+**Status:** pendente — criar script + cron
 
 ---
 
-## TAGS CRIADAS NO PIPEDRIVE
-
-Amarelo (Proposta):
-- EX | Proposta | Casa Ressacada
-- EX | Proposta | Suncoast 1601
-- EX | Proposta | Cezanne 1701
-- EX | Proposta | Soho 1102
-- EX | Proposta | Marechiaro 402
-
-Verde (Visita):
-- EX | Visita | Casa Ressacada
-- EX | Visita | Suncoast 1601
-- EX | Visita | Cezanne 1701
-- EX | Visita | Soho 1102
-- EX | Visita | Marechiaro 402
-
-**API de Tags:** Não funciona nesta conta (endpoint retorna 404)
+## TAGS PIPEDRIVE (criadas manualmente)
+- EX | Proposta | Casa Ressacada / Suncoast 1601 / Cezanne 1701 / Soho 1102 / Marechiaro 402
+- EX | Visita | Casa Ressacada / Suncoast 1601 / Cezanne 1701 / Soho 1102 / Marechiaro 402
+⚠️ API de tags não funciona nessa conta — só manual
 
 ---
 
-## CREDENCIAIS
+## DADOS TÉCNICOS
+- Pipeline Funil de Vendas: ID 19
+- Stage Visita Feita: 118 | Proposta Feita: 119
+- Pipedrive token: /data/.openclaw/credentials/pipedrive.env
+- Supabase URL: https://vtykzralkxlbqqkleofl.supabase.co
+- Relatório visitas: https://visitas.gabrielcerteiro.com.br/
 
-- Pipedrive: /data/.openclaw/credentials/pipedrive.env ✅
-- n8n: /data/.openclaw/credentials/n8n.env ✅
-- Landing page: API/acesso pendente
+---
+
+## CREDENCIAIS PENDENTES (salvar no cofre manualmente)
+1. GitHub: /data/.openclaw/credentials/github.env → GITHUB_TOKEN=xxx
+2. Supabase service role: adicionar em supabase.env → SUPABASE_SERVICE_ROLE_KEY=xxx
+   (https://supabase.com/dashboard/project/vtykzralkxlbqqkleofl/settings/api)
 
 ---
 
 ## PRÓXIMOS PASSOS
-
-1. Gabriel informar como acessar dados da landing page
-2. Implementar cron pra visitas
-3. Implementar cron pra propostas + follow-up
-4. Testar tudo
+1. Gabriel salva Supabase service role key no cofre
+2. Criar cron monitor-visitas (15min)
+3. Criar script + cron monitor-propostas
+4. Testar fluxo completo

@@ -4,6 +4,50 @@
     "trello": {
       "version": "1.0.0",
       "installedAt": 1774387968764
+    },
+    "ocr-local": {
+      "version": "1.0.0",
+      "installedAt": 1775950866476
+    },
+    "office-document-specialist-suite": {
+      "version": "1.0.2",
+      "installedAt": 1775950868925
+    },
+    "image-ocr": {
+      "version": "1.0.0",
+      "installedAt": 1775950923344
+    },
+    "self-improving-agent": {
+      "version": "3.0.13",
+      "installedAt": 1775950925436
+    },
+    "skill-vetter": {
+      "version": "1.0.0",
+      "installedAt": 1775950927412
+    },
+    "google-sheets": {
+      "version": "1.0.6",
+      "installedAt": 1775950929673
+    },
+    "auto-updater": {
+      "version": "1.0.0",
+      "installedAt": 1775950931696
+    },
+    "proactive-agent-lite": {
+      "version": "1.0.0",
+      "installedAt": 1775951203577
+    },
+    "multi-search-engine": {
+      "version": "2.1.3",
+      "installedAt": 1775951205658
+    },
+    "lark-calendar": {
+      "version": "1.0.0",
+      "installedAt": 1775951208616
+    },
+    "ontology": {
+      "version": "1.0.4",
+      "installedAt": 1775951210360
     }
   }
 }

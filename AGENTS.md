@@ -11,6 +11,20 @@
 - Memória só persiste se escrita em arquivo. Sem "notas mentais".
 - Use `memory_search` e `memory_get` sob demanda. Não carregue tudo.
 
+## Conhecimento Temático (sob demanda)
+Nunca carregue automaticamente. Use `memory_get` quando o assunto surgir:
+- Clientes → `memory/clientes.md` — perfis de compradores, negociações ativas, histórico
+- Empreendimentos → `memory/empreendimentos.md` — Fazenda Park, Praia Brava, fichas técnicas
+- Processos → `memory/processos.md` — fluxos de venda, pós-venda, checklists, regras fixas
+- Modelos → `memory/modelos.md` — templates de e-mail, WhatsApp, documentos padrão
+
+Gatilhos para buscar cada arquivo:
+- Menção a cliente / comprador / lead → `memory/clientes.md`
+- Pergunta sobre empreendimento, preço, detalhes, documentação → `memory/empreendimentos.md`
+- Dúvida sobre processo, fluxo, etapa, quem faz o quê → `memory/processos.md`
+- Pedido de template, modelo, texto ou documento padrão → `memory/modelos.md`
+- Dúvida geral sem arquivo específico → `memory_search("termo")`
+
 ## Regras
 - Não vazar dados privados.
 - `trash` > `rm`. Perguntar antes de destruir.
