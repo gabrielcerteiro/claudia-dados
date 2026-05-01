@@ -3,11 +3,11 @@
 ## Estrutura da Workspace
 
 ```
-/data/.openclaw/workspace/
+/claudia-dados/
 │
 ├─ 🎭 IDENTIDADE (Quem sou)
 │  ├── IDENTITY.md          → Nome, role, vibe
-│  ├── SOUL.md (→ 01_soul.md) → Valores e comportamento
+│  ├── SOUL.md              → Valores e comportamento
 │  └── USER.md              → Quem é meu usuário (Gabriel)
 │
 ├─ 📚 OPERACIONAL (Como funciono)
@@ -18,13 +18,23 @@
 │  ├── operacao.md          → Rotinas, cron tasks, templates de comunicação
 │  └── regras.md            → Políticas, limites, faseamento
 │
+├─ ⚙️ AUTOMAÇÕES n8n (Claudia como agente autônomo)
+│  ├── N8N_AUTOMACOES.md   → Workflows, skills, fases, credenciais pendentes ← NOVO
+│  └── AUTOMACOES.md       → Automações legado (visitas, propostas, Pipedrive)
+│
 ├─ 🧠 MEMÓRIA (O que lembro)
 │  ├── MEMORY.md            → Contexto vivo (atualizado, histórico de anotações)
 │  └── memory/              → Histórico de sessões por data
 │
+├─ 📋 GESTÃO
+│  ├── BACKLOG.md           → Demandas abertas e status operacional
+│  ├── AUDITORIA.md         → Registro de auditorias
+│  └── TRELLO_STATUS.md     → Status do board Trello
+│
 ├─ ⚙️ SISTEMA
 │  ├── HEARTBEAT.md         → Tarefas periódicas
 │  ├── TOOLS.md             → Notas locais (câmeras, SSH, etc)
+│  ├── CRON_TASKS_CONFIG.md → Configuração de crons
 │  └── README.md            → Este arquivo
 │
 └─ 📁 skills/               → Skills customizadas
@@ -39,25 +49,28 @@
 ## 📖 Como Usar Esta Workspace
 
 ### 1️⃣ Quero entender quem é Claudia?
-- Leia: **IDENTITY.md** (nome, role, emoji)
-- Leia: **01_soul.md** (valores, comportamento, princípios)
+→ **IDENTITY.md** + **01_soul.md**
 
 ### 2️⃣ Quero entender a empresa?
-- Leia: **empresa.md** (CNPJ, mercado, equipe, sistemas, regras de negócio)
+→ **empresa.md**
 
 ### 3️⃣ Quero saber como Claudia deve agir?
-- Leia: **agentes.md** (mapa da equipe, escalação, árvore de decisão)
-- Leia: **regras.md** (políticas, limites, o que NUNCA fazer)
+→ **agentes.md** + **regras.md**
 
-### 4️⃣ Quero entender as rotinas?
-- Leia: **operacao.md** (cron tasks, templates, monitoramento)
+### 4️⃣ Quero entender as rotinas operacionais?
+→ **operacao.md**
 
 ### 5️⃣ Quero saber quais ferramentas Claudia usa?
-- Leia: **02_skills.md** (Trello, Pipedrive, Google Drive, Brave Search, etc)
+→ **02_skills.md**
 
-### 6️⃣ Quero consultar memória ou contexto histórico?
-- Leia: **MEMORY.md** (contexto vivo + notas importantes)
-- Consulte: **memory/** (histórico de sessões por data)
+### 6️⃣ Quero ver o que está pendente / status operacional?
+→ **BACKLOG.md**
+
+### 7️⃣ Quero entender as automações no n8n (Claudia autônoma)?
+→ **N8N_AUTOMACOES.md**
+
+### 8️⃣ Quero consultar memória ou contexto histórico?
+→ **MEMORY.md** + pasta **memory/**
 
 ---
 
@@ -65,7 +78,7 @@
 
 | Função | Arquivo |
 |--------|---------|
-| Monitorar tarefas e prazos | operacao.md |
+| Monitorar tarefas e prazos | operacao.md, BACKLOG.md |
 | Cobrar responsáveis | agentes.md |
 | Organizar agenda do Gabriel | operacao.md |
 | Consolidar informações | MEMORY.md |
@@ -74,59 +87,40 @@
 | Gerenciar Pipedrive | 02_skills.md |
 | Comunicar com clientes | agentes.md, operacao.md |
 | Escalar problemas | agentes.md |
+| Processar docs ZapSign → Drive | N8N_AUTOMACOES.md |
+| Notificar Gabriel no WhatsApp | N8N_AUTOMACOES.md |
 
 ---
 
-## 🔄 Fluxo de Decisão Rápido
+## 🤖 Como Reativar o Contexto em Nova Sessão
 
-```
-1. Cliente pergunta algo?
-   → agentes.md (Árvore de Escalação)
+**Contexto mínimo (operação do dia a dia):**
+> *"Leia `README.md`, `IDENTITY.md` e `BACKLOG.md` no repositório `gabrielcerteiro/claudia-dados`."*
 
-2. Equipe tem bloqueio?
-   → agentes.md (Árvore de Escalação)
+**Contexto completo (incluindo automações n8n):**
+> *"Leia `README.md`, `IDENTITY.md`, `empresa.md` e `N8N_AUTOMACOES.md` no repositório `gabrielcerteiro/claudia-dados`."*
 
-3. Claudia detecta problema?
-   → operacao.md (Detecção de Problemas)
-
-4. Não sabe o que fazer?
-   → agentes.md (Quando Claudia não sabe o que fazer)
-
-5. Precisa verificar segurança?
-   → regras.md (Políticas & Limites)
-
-6. Precisa fazer comunicação?
-   → operacao.md (Templates de Relatórios)
-```
+**Para retomar desenvolvimento de automações:**
+> *"Leia `N8N_AUTOMACOES.md` no repositório `gabrielcerteiro/claudia-dados` e me diz o status atual e o que falta fazer."*
 
 ---
 
 ## 🔐 Credenciais & Segurança
 
-- ✅ Todas as API keys em: `/data/.openclaw/credentials/` (seguro)
+- ✅ API keys sensíveis: `/data/.openclaw/credentials/`
 - ❌ NUNCA exponha credentials em chat
 - 🔒 Leia: **regras.md** (Segurança)
+- ⚠️ Credenciais n8n pendentes: ver **N8N_AUTOMACOES.md**
 
 ---
 
 ## 📅 Última Atualização
 
-- **Data:** 26/03/2026
-- **Versão:** 1.0 (Reorganização)
-- **Status:** ✅ Estrutura limpa e consolidada
+- **Data:** 01/05/2026
+- **Versão:** 1.1
+- **Mudanças:** Adicionado `N8N_AUTOMACOES.md` com arquitetura da Claudia no n8n (orquestrador + skills ZapSign + rotina Drive/WhatsApp)
+- **Status:** Fase 1 infraestrutura concluída — aguardando credenciais para ativar
 
 ---
 
-## 🚀 Próximas Etapas
-
-- [ ] Inicializar Git e fazer primeiro commit
-- [ ] Conectar ao GitHub
-- [ ] Validar FASES de operação com Gabriel
-- [ ] Começar FASE 1 (Observação)
-- [ ] Setup de cron tasks
-- [ ] Conectar Pipedrive (leitura/escrita)
-- [ ] Conectar Trello (monitoramento)
-
----
-
-*README.md — Estrutura de Claudia v1.0*
+*README.md — Estrutura de Claudia v1.1*
