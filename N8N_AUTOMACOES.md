@@ -204,9 +204,15 @@ HTTP POST → stevo.chat API → resposta no WhatsApp
   - [ ] AI Agent (Claude Sonnet) com system prompt da Claudia
   - [ ] Tool: `contaazul_*` (4 skills financeiras)
   - [ ] Tool: `zapsign_*` (chamar workflow `eNR0oygLCZVpD9He`)
+  - [ ] Tool: `arquivar_doc_drive` — ver [`SKILL_DRIVE_ARQUIVAR_DOC.md`](SKILL_DRIVE_ARQUIVAR_DOC.md)
   - [ ] Resposta via stevo.chat API
 - [ ] Testar com Gabriel (+5547996505050)
 - [ ] Instalar Chatwoot (Docker) para monitoramento
+
+#### Sub-feature: Arquivamento de docs no Drive
+- **Branch:** `claude/check-document-payload-LQ9b2`
+- **Doc:** [`SKILL_DRIVE_ARQUIVAR_DOC.md`](SKILL_DRIVE_ARQUIVAR_DOC.md)
+- **Status:** Etapa 1 bloqueada aguardando payload real de doc do stevo.chat
 
 ---
 
